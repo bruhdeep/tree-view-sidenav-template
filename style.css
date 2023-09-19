@@ -1,0 +1,105 @@
+.rmm {
+  margin: 1px auto;
+  text-align: left;
+  font-family: Tahoma;
+}
+
+.rmm ul {
+  text-align: left;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.rmm ul ul {
+  display: none;
+  margin: 0;
+}
+
+.rmm ul li:hover > ul { display: block; }
+
+.rmm ul {
+  background: #990;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+
+.rmm ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.rmm ul li { float: left; }
+
+.rmm ul li:hover { background: #4b545f; }
+
+.rmm ul li:hover a { color: #fff; }
+
+.rmm ul li a {
+  color: #fff;
+  font-weight: 600;
+  display: block;
+  padding: 15px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rmm ul ul {
+  background: #5f6975;
+  border-radius: 0px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.rmm ul ul li {
+  border-bottom: 1px solid #575F6A;
+  border-top: 1px solid #6B727C;
+  float: none;
+  min-width: 200px;
+  position: relative;
+}
+
+.rmm ul ul li a {
+  padding: 12px 35px;
+  color: #fff;
+  text-align: left;
+}
+
+.rmm ul ul li a:hover { background: #4b545f; }
+
+.rmm ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.rmm li.dl-back:after,
+.rmm li > a:not(:only-child):after {
+  font-family: 'icomoon';
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  content: "\e000";
+  position: relative;
+  display: inline-block;
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+  top: -1px;
+  right: -20px;
+  float: right;
+}
+
+.rmm .fixie:after { top: -20px!important; }
+
+.rmm-mobile .fixie:after { top: -1px!important; }
+
+.rmm .dl-back:after { display: none!important; }
+
+.rmm li li.dl-back:after,
+.rmm li li > a:not(:only-child):after {
+  -webkit-transform: rotate(120deg)!important;
+  transform: rotate(120deg)!important;
+}
